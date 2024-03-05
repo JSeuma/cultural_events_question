@@ -1,4 +1,4 @@
-from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.sql_database import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseChain
 from langchain.prompts.prompt import PromptTemplate
