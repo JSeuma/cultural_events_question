@@ -1,4 +1,4 @@
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.sql_database import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseChain
 from langchain.prompts.prompt import PromptTemplate
@@ -47,7 +47,7 @@ def cultura_es_vida(query):
 
     OPENAI_API_KEY="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"
 
-    streaming_llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, streaming=True, openai_api_key=OPENAI_API_KEY)
+    streaming_llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, streaming=True, openai_api_key=OPENAI_API_KEY)
 
     db = SQLDatabase.from_uri(uri_mysql)
 
