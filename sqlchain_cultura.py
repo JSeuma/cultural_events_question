@@ -48,7 +48,9 @@ def cultura_es_vida(query):
         template=_mysql_prompt + PROMPT_SUFFIX,
     )
 
-    streaming_llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
+    OPENAI_API_KEY="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"
+
+    streaming_llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, streaming=True, openai_api_key=OPENAI_API_KEY)
 
     db = SQLDatabase.from_uri(uri_mysql)
 
