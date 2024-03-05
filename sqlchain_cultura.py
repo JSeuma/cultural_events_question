@@ -1,12 +1,9 @@
-from langchain_openai import ChatOpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.sql_database import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseChain
 from langchain.prompts.prompt import PromptTemplate
-from dotenv import load_dotenv
 import sqlite3
 import pandas as pd
-# Load the environment variables from the .env file
-load_dotenv(".env")
 
 import warnings
 warnings.filterwarnings("ignore")
